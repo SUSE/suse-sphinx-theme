@@ -1,0 +1,22 @@
+{% if page_source_suffix %}{# an input file was read #}
+<!-- SOURCE_FILE: {% if giturl %}{{giturl}}/{% endif %}{{pagename}}{{page_source_suffix}} -->
+{% else %}{# a template was rendered directly #}
+<!-- TEMPLATE_NAME: {{pagename}} -->
+{% endif %}
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button class="navbar-toggle" data-target="#bs-example-navbar-collapse-1" data-toggle="collapse" type="button">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <div class="brand-wrapper">
+        <a class="navbar-brand" href="https://www.suse.com/"></a>
+      </div>
+    </div>
+  </div>
+  <!-- /.container -->
+</nav>

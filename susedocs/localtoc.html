@@ -1,0 +1,8 @@
+{%- if theme_sidebar_mode == 'toctree' and theme_display_toc and display_toc %}
+  <div class="docs-sidebar-toc local">
+    <div class="docs-sidebar-section" id="local-table-of-contents">
+      <h4 class="docs-sidebar-section-title">{% if theme_display_global_toc_section %}Page {% endif %}Contents</h4>
+      {{ toc }}
+    </div>
+  </div>
+{%- endif %}
