@@ -1592,7 +1592,7 @@ footer {
   padding: 70px 0; }
 
 .footer-links h3 {
-  color: #fff;
+  color: #AAA;
   font-size: 14px;
 }
 
@@ -1603,11 +1603,17 @@ footer {
   -webkit-padding-start: 0; }
 
 .footer-links ul li a {
-  color: #aaa;
+  color: #999;
   font-size: 12px;
   font-weight: 400;
   list-style: none;
   margin-left: 0; }
+
+.footer-links ul li a:focus {
+  color: #02D35F; }
+
+.footer-links ul li a:hover {
+  color: #02D35F; }
 
 .social-icons {
   width: 40px;
@@ -1615,6 +1621,29 @@ footer {
   display: inline-block;
   margin-right: 10px; }
 
+.footer-twitter {
+  background: url('../images/footer-twitter.png') no-repeat; }
+
+.footer-twitter:hover {
+  background: url('../images/footer-twitter-hover.png') no-repeat; }
+
+.footer-facebook {
+  background: url('../images/footer-facebook.png') no-repeat; }
+
+.footer-facebook:hover {
+  background: url('../images/footer-facebook-hover.png') no-repeat; }
+
+.footer-linkedin {
+  background: url('../images/footer-linkedin.png') no-repeat; }
+
+.footer-linkedin:hover {
+  background: url('../images/footer-linkedin-hover.png') no-repeat; }
+
+.footer-youtube {
+  background: url('../images/footer-youtube.png') no-repeat; }
+
+.footer-youtube:hover {
+  background: url('../images/footer-youtube-hover.png') no-repeat; }
 
 .newsletter-form {
   margin: 10px 0 30px;

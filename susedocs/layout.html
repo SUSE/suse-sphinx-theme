@@ -38,7 +38,7 @@ ga('send', 'pageview');
         <div class="col-lg-9 col-md-8 col-sm-8 col-lg-push-3 col-md-push-4 col-sm-push-4">
 {% include 'titlerow.html' %}
           <div class="row docs-byline">
-            <div class="docs-updated">updated: {{ last_updated }}</div>
+            <!-- TODO - see if we can make last_updated work  <div class="docs-updated">updated: {{ last_updated }}</div> -->
             {%- block otherversions %}
                {%- if other_versions %}
             <div class="version-dropdown">
@@ -68,10 +68,19 @@ ga('send', 'pageview');
             <a href="{{ next.link|e }}"><i class="fa fa-angle-double-right" data-toggle="tooltip" data-placement="top" title="Next: {{ next.title|striptags }}"></i></a>
           {% endif %}
           </div>
+        <div class=row">
+          <div class="col-lg-8 col-md-8 col-sm-8 docs-license">
+{% include 'license_cc.html' %}
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-4 docs-actions-wrapper">
+            <a href="http://ask.openstack.org" class="docs-footer-actions"><i class="fa fa-question-circle"></i> questions?</a>
+          </div>
         </div>
+      </div>
 {% include 'sidebartoc.html' %}
       </div>
     </div>
+{% include 'footer.html' %}
 {% include 'script_footer.html' %}
   </body>
 </html>
