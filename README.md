@@ -3,6 +3,30 @@
 # Branding
 SUSE branding for documentation built with Sphinx
 
+# Installing
+
+## Install as package
+
+In order to automatically install the theme, do the following
+
+1. Checkout this repository:
+   ```
+   git checkout https://github.com/SUSE/suse-sphinx-theme.git
+   ```
+2. Install:
+   ```
+   python setup.py install
+   ```
+3. Change the theme name in your `conf.py`:
+   ```
+   html_theme = 'susedocs'
+   ```
+4. Start building with the new theme
+   ```
+   make html
+   ```
+
+## Manual installation
 To use the SUSE Sphinx theme, do the following:
 
 1. Copy the susedocs folder from this repo to the base directory for your Sphinx documentation
