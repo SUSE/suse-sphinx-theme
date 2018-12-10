@@ -1,0 +1,7 @@
+include susedocs/theme.conf
+include susedocs/*.html
+include susedocs/static/css/*.css
+include susedocs/static/images/*.*
+include susedocs/static/images/docs/*.*
+include susedocs/static/js/*.js
+include susedocs/static/fonts/*.*
