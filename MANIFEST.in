@@ -1,7 +1,7 @@
-include susedocs/theme.conf
-include susedocs/*.html
-include susedocs/static/css/*.css
-include susedocs/static/images/*.*
-include susedocs/static/images/docs/*.*
-include susedocs/static/js/*.js
-include susedocs/static/fonts/*.*
+include suse_sphinx_theme/theme.conf
+include suse_sphinx_theme/*.html
+include suse_sphinx_theme/static/css/*.css
+include suse_sphinx_theme/static/images/*.*
+include suse_sphinx_theme/static/images/docs/*.*
+include suse_sphinx_theme/static/js/*.js
+include suse_sphinx_theme/static/fonts/*.*

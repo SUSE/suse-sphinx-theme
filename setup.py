@@ -6,7 +6,7 @@
 """
 from io import open
 from setuptools import setup
-from susedocs import __version__
+from suse_sphinx_theme import __version__
 
 
 setup(
@@ -19,9 +19,9 @@ setup(
     description='Sphinx Documentation theme that has SUSE branding',
     long_description=open('README.md', encoding='utf-8').read(),
     zip_safe=False,
-    packages=['susedocs'],
-    package_dir={'susedocs': 'susedocs'},
-    package_data={'susedocs': [
+    packages=['suse_sphinx_theme'],
+    package_dir={'suse_sphinx_theme': 'suse_sphinx_theme'},
+    package_data={'suse_sphinx_theme': [
         'theme.conf',
         '*.html',
         'static/css/*.css',
@@ -33,7 +33,7 @@ setup(
     # See http://www.sphinx-doc.org/en/stable/theming.html#distribute-your-theme-as-a-python-package
     entry_points = {
         'sphinx.html_themes': [
-            'susedocs = susedocs',
+            'suse_sphinx_theme = suse_sphinx_theme',
         ]
     },
     install_requires=[
