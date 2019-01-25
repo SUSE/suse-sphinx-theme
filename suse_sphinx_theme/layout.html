@@ -62,10 +62,10 @@ ga('send', 'pageview');
           </div>
           <div class="docs-actions">
           {% if prev %}
-            <a href="{{ prev.link|e }}"><i class="fa fa-angle-double-left" data-toggle="tooltip" data-placement="top" title="Previous: {{ prev.title|striptags }}"></i></a>
+            <a href="{{ prev.link|e }}"><i class="material-icons" data-toggle="tooltip" data-placement="top" title="Previous: {{ prev.title|striptags }}">navigate_before</i></a>
           {% endif %}
           {% if next %}
-            <a href="{{ next.link|e }}"><i class="fa fa-angle-double-right" data-toggle="tooltip" data-placement="top" title="Next: {{ next.title|striptags }}"></i></a>
+            <a href="{{ next.link|e }}"><i class="material-icons" data-toggle="tooltip" data-placement="top" title="Next: {{ next.title|striptags }}">navigate_next</i></a>
           {% endif %}
           </div>
         <div class=row">
@@ -73,7 +73,7 @@ ga('send', 'pageview');
 {% include 'license_cc.html' %}
           </div>
           <div class="col-lg-4 col-md-4 col-sm-4 docs-actions-wrapper">
-            <a href="http://ask.openstack.org" class="docs-footer-actions"><i class="fa fa-question-circle"></i> questions?</a>
+            <a href="http://ask.openstack.org" class="docs-footer-actions"><i class="material-icons">help</i> questions?</a>
           </div>
         </div>
       </div>
