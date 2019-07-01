@@ -1,7 +1,3 @@
 include suse_sphinx_theme/theme.conf
 include suse_sphinx_theme/*.html
-include suse_sphinx_theme/static/css/*.css
-include suse_sphinx_theme/static/images/*.*
-include suse_sphinx_theme/static/images/docs/*.*
-include suse_sphinx_theme/static/js/*.js
-include suse_sphinx_theme/static/fonts/*.*
+recursive-include suse_sphinx_theme/static *
