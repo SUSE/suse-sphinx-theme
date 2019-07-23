@@ -799,7 +799,7 @@ h1, h2, h3, h4, h5 {
 }
 
 a, a:visited {
-  color: #439239; }
+  color: #02d35f; }
 
 .lead {
   font-size: 18px;
@@ -816,7 +816,9 @@ a, a:visited {
 a.navbar-brand {
   background: url('../images/suselogo.png') left no-repeat;
   height: 50px;
-  width: 135px; }
+  width: 135px;
+  background-size: contain;
+}
 
 @media (min-width: 768px) and (max-width: 1025px) {
   .brand-wrapper {
@@ -834,16 +836,8 @@ a.navbar-brand {
     margin-left: 15px; } }
 
 .navbar-default {
-  border: none;
   border-radius: 0px;
-  background: #7DC44C;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#7dc44c), to(#FFFFFF)); /* Saf4+, Chrome */
-  background-image: -webkit-linear-gradient(right, #7dc44c, #FFFFFF); /* Chrome 10+, Saf5.1+ */
-  background-image: -moz-linear-gradient(right, #7dc44c, #FFFFFF); /* FF3.6+ */
-  background-image: -ms-linear-gradient(right, #7dc44c, #FFFFFF); /* IE10 */
-  background-image: -o-linear-gradient(right, #7dc44c, #FFFFFF); /* Opera 11.10+ */
-  background-image: linear-gradient(right, #7dc44c, #FFFFFF); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#7dc44c', endColorstr='#FFFFFF');
+  background: white;
   margin-bottom: 0;
   padding: 20px 0; }
 
@@ -1806,7 +1800,7 @@ footer {
 /*End Footer*/
 /* Line below navigation */
 .navbar-default {
-  border-bottom: 1px solid #ddd; }
+  border-bottom: 5px solid #02d35f; }
 
 #home.navbar-default {
   border-bottom: none; }
