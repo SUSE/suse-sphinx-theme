@@ -1,0 +1,50 @@
+---
+name: Theme Tests
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - sphinx-version: ">=4,<5"
+            python-version: "3.8"
+          - sphinx-version: ">=5,<6"
+            python-version: "3.10"
+          - sphinx-version: ">=6,<7"
+            python-version: "3.14"
+          - sphinx-version: ">=7,<8"
+            python-version: "3.14"
+          - sphinx-version: ">=8,<9"
+            python-version: "3.x"
+          - sphinx-version: ">=9,<10"
+            python-version: "3.x"
+
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install "sphinx${{ matrix.sphinx-version }}"
+          # Fix for Sphinx 4 pulling in incompatible extensions
+          if [[ "${{ matrix.sphinx-version }}" == *"<5"* ]]; then
+            pip install "sphinxcontrib-applehelp<2.0.0" "sphinxcontrib-devhelp<2.0.0" "sphinxcontrib-htmlhelp<2.1.0" "sphinxcontrib-qthelp<2.0.0" "sphinxcontrib-serializinghtml<2.0.0"
+          fi
+          pip install .
+
+      - name: Test Build
+        run: sphinx-build -b html tests/test_project public
+
+      - name: Verify Output
+        run: test -f public/index.html
