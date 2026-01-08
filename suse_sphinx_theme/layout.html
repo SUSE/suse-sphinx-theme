@@ -10,10 +10,10 @@
 {{ metatags }}
 {% include 'css.html' %}
 {%- for cssfile in css_files %}
-<link rel="stylesheet" href="{{ pathto(cssfile, 1) }}" type="text/css" />
+<link rel="stylesheet" href="{{ pathto(cssfile.filename|default(cssfile), 1) }}" type="text/css" />
 {%- endfor %}
 {%- for js in script_files %}
-<script type="text/javascript" src="{{ pathto(js, 1) }}"></script>
+<script type="text/javascript" src="{{ pathto(js.filename|default(js), 1) }}"></script>
 {%- endfor %}
   {# FAVICON #}
     <link rel="shortcut icon" href="{{ pathto('_static/favicon.ico', 1) }}"/>
